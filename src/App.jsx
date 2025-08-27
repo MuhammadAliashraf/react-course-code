@@ -8,9 +8,19 @@ import Count from './Lecture-4/count'
 import NameInput from './Lecture-4/name-input'
 import Like from './Lecture-4/like'
 import FeedbackForm from './Lecture-5/feedback-form'
+import Greeting from './lecture-6/greeting'
+import { useState } from 'react'
+import UserList from './lecture-6/user-list'
+import TodoList from './lecture-6/todo'
 
 
 function App() {
+
+  const [login, setLogin] = useState(false)
+
+  const handleLogin = () => {
+    setLogin(true)
+  }
 
   
 
@@ -53,9 +63,27 @@ function App() {
 
       {/* <h1>Welcome to React Lecture 5</h1>
       <p>Lecture 5: Input Fields & Forms in React (Basics)</p> */}
+      {/* <FeedbackForm/> */}
+      
+      {/* <h1>Welcome to React Lecture 6</h1>
+      <p>Lecture 6: Conditional Rendering & Lists in React</p> */}
 
-<FeedbackForm/>
+          {/* Example :1  COnditional Rendering */}
+        <Greeting isLoggedIn={login}/>
 
+        {
+          !login && 
+        <button onClick={handleLogin}>Login</button>
+        }
+
+        {
+          login &&
+        <button onClick={() => setLogin(false)}>Logout</button>
+        }
+
+          {/* Example :2  Render User list */}
+          <UserList/>
+          <TodoList/>
 
     </>
   )
