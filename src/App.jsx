@@ -7,6 +7,7 @@ import Wrapper from './component/wrapper'
 import Count from './Lecture-4/count'
 import NameInput from './Lecture-4/name-input'
 import Like from './Lecture-4/like'
+import FeedbackForm from './Lecture-5/feedback-form'
 
 
 function App() {
@@ -42,11 +43,18 @@ function App() {
           <p>Javascript is a programming language</p>
         </Wrapper> */}
 
+        {/* lecture 4 start 
+
         <Count/>
         <NameInput/>
         <Like/>
 
+        lecture 4 end */}
 
+      {/* <h1>Welcome to React Lecture 5</h1>
+      <p>Lecture 5: Input Fields & Forms in React (Basics)</p> */}
+
+<FeedbackForm/>
 
 
     </>
