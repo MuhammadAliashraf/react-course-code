@@ -12,17 +12,82 @@ import Greeting from './lecture-6/greeting'
 import { useState } from 'react'
 import UserList from './lecture-6/user-list'
 import TodoList from './lecture-6/todo'
+import Movies from './lecture-7/movies'
+import { useEffect } from 'react'
 
 
 function App() {
 
-  const [login, setLogin] = useState(false)
+  // const [login, setLogin] = useState(false)
 
-  const handleLogin = () => {
-    setLogin(true)
+  // const handleLogin = () => {
+  //   setLogin(true)
+  // }
+
+  const movies = [
+  {
+    name: "Inception",
+    releaseDate: "2010-07-16",
+    category: "Sci-Fi"
+  },
+  {
+    name: "The Dark Knight",
+    releaseDate: "2008-07-18",
+    category: "Action"
+  },
+  {
+    name: "Interstellar",
+    releaseDate: "2014-11-07",
+    category: "Sci-Fi"
+  },
+  {
+    name: "The Matrix",
+    releaseDate: "1999-03-31",
+    category: "Sci-Fi"
+  },
+  {
+    name: "Gladiator",
+    releaseDate: "2000-05-05",
+    category: "Historical Drama"
+  },
+  {
+    name: "Titanic",
+    releaseDate: "1997-12-19",
+    category: "Romance"
+  },
+  {
+    name: "Avengers: Endgame",
+    releaseDate: "2019-04-26",
+    category: "Superhero"
+  },
+  {
+    name: "Joker",
+    releaseDate: "2019-10-04",
+    category: "Drama"
+  },
+  {
+    name: "The Lion King",
+    releaseDate: "1994-06-24",
+    category: "Animation"
+  },
+  {
+    name: "Forrest Gump",
+    releaseDate: "1994-07-06",
+    category: "Drama"
   }
+];
 
-  
+  const [data, setData] = useState([])
+  const [isloading, setIsloading] = useState(false)
+
+  useEffect(()=>{
+    setIsloading(true)
+    setTimeout(() => {
+      setData(movies)
+      setIsloading(false)
+    }, 2000);
+  },[])
+
 
   return (
     <>
@@ -39,9 +104,6 @@ function App() {
           <button>Click Me</button>
           <ProfileCard name="Box Xhildern" position="Inside the Box" />
         </Box>
-
-
-
 
         <Wrapper title="Html" >
           <p>Html is hyper text markup language</p>
@@ -69,7 +131,7 @@ function App() {
       <p>Lecture 6: Conditional Rendering & Lists in React</p> */}
 
           {/* Example :1  COnditional Rendering */}
-        <Greeting isLoggedIn={login}/>
+        {/* <Greeting isLoggedIn={login}/>
 
         {
           !login && 
@@ -82,11 +144,24 @@ function App() {
         }
 
           {/* Example :2  Render User list */}
-          <UserList/>
-          <TodoList/>
+          {/* <UserList/>
+          <TodoList/> */}
+
+            {/* // Lecture 7: render list and ux  */}
+
+            {/* <h1>Render list Item In React with all the possible solutions</h1> */}
+            <Movies movies={data} loading={isloading}   />
+
+
+
 
     </>
   )
 }
 
 export default App
+
+
+// 1- data display ✅
+// 2 - loading   ✅ 
+// 3- error handling ✅ 
