@@ -16,6 +16,8 @@ import Movies from './lecture-7/movies'
 import { useEffect } from 'react'
 import Logger from './lecture-10-11-12/logger'
 import ApiFetching from './lecture-10-11-12/api-fetching'
+import ProductCard from './lecture-13/product-card'
+import ProductList from './lecture-13/product-list'
 
 
 function App() {
@@ -156,9 +158,11 @@ function App() {
             {/* <Movies movies={data} loading={isloading}   /> */}
 
 
-      <Logger/>   
-      <ApiFetching/>
+      {/* <Logger/>   
+      <ApiFetching/> */}
 
+
+      <ProductList  />
 
 
 
