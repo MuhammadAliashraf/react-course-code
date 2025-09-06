@@ -84,7 +84,7 @@ Welcome to the **Class Practice Repository**! This repo will contain all the cod
 2. **Add a mini README** for that class (template below):
 
    ```markdown
-   # Class: Arrays & Loops (2025-08-24)
+   # Class: Arrays & Loops (2025-08--24)
 
    ## Covered
    - Arrays basics
