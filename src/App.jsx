@@ -14,6 +14,8 @@ import UserList from './lecture-6/user-list'
 import TodoList from './lecture-6/todo'
 import Movies from './lecture-7/movies'
 import { useEffect } from 'react'
+import Logger from './lecture-10-11-12/logger'
+import ApiFetching from './lecture-10-11-12/api-fetching'
 
 
 function App() {
@@ -24,69 +26,70 @@ function App() {
   //   setLogin(true)
   // }
 
-  const movies = [
-  {
-    name: "Inception",
-    releaseDate: "2010-07-16",
-    category: "Sci-Fi"
-  },
-  {
-    name: "The Dark Knight",
-    releaseDate: "2008-07-18",
-    category: "Action"
-  },
-  {
-    name: "Interstellar",
-    releaseDate: "2014-11-07",
-    category: "Sci-Fi"
-  },
-  {
-    name: "The Matrix",
-    releaseDate: "1999-03-31",
-    category: "Sci-Fi"
-  },
-  {
-    name: "Gladiator",
-    releaseDate: "2000-05-05",
-    category: "Historical Drama"
-  },
-  {
-    name: "Titanic",
-    releaseDate: "1997-12-19",
-    category: "Romance"
-  },
-  {
-    name: "Avengers: Endgame",
-    releaseDate: "2019-04-26",
-    category: "Superhero"
-  },
-  {
-    name: "Joker",
-    releaseDate: "2019-10-04",
-    category: "Drama"
-  },
-  {
-    name: "The Lion King",
-    releaseDate: "1994-06-24",
-    category: "Animation"
-  },
-  {
-    name: "Forrest Gump",
-    releaseDate: "1994-07-06",
-    category: "Drama"
-  }
-];
+//   const movies = [
+//   {
+//     name: "Inception",
+//     releaseDate: "2010-07-16",
+//     category: "Sci-Fi"
+//   },
+//   {
+//     name: "The Dark Knight",
+//     releaseDate: "2008-07-18",
+//     category: "Action"
+//   },
+//   {
+//     name: "Interstellar",
+//     releaseDate: "2014-11-07",
+//     category: "Sci-Fi"
+//   },
+//   {
+//     name: "The Matrix",
+//     releaseDate: "1999-03-31",
+//     category: "Sci-Fi"
+//   },
+//   {
+//     name: "Gladiator",
+//     releaseDate: "2000-05-05",
+//     category: "Historical Drama"
+//   },
+//   {
+//     name: "Titanic",
+//     releaseDate: "1997-12-19",
+//     category: "Romance"
+//   },
+//   {
+//     name: "Avengers: Endgame",
+//     releaseDate: "2019-04-26",
+//     category: "Superhero"
+//   },
+//   {
+//     name: "Joker",
+//     releaseDate: "2019-10-04",
+//     category: "Drama"
+//   },
+//   {
+//     name: "The Lion King",
+//     releaseDate: "1994-06-24",
+//     category: "Animation"
+//   },
+//   {
+//     name: "Forrest Gump",
+//     releaseDate: "1994-07-06",
+//     category: "Drama"
+//   }
+// ];
 
-  const [data, setData] = useState([])
-  const [isloading, setIsloading] = useState(false)
+//   const [data, setData] = useState([])
+//   const [isloading, setIsloading] = useState(false)
 
-  useEffect(()=>{
-    setIsloading(true)
-    setTimeout(() => {
-      setData(movies)
-      setIsloading(false)
-    }, 2000);
-  },[])
+//   useEffect(()=>{
+//     setIsloading(true)
+//     setTimeout(() => {
+//       setData(movies)
+//       setIsloading(false)
+//     }, 2000);
+//   },[])
+
 
 
   return (
@@ -150,7 +153,11 @@ function App() {
             {/* // Lecture 7: render list and ux  */}
 
             {/* <h1>Render list Item In React with all the possible solutions</h1> */}
-            <Movies movies={data} loading={isloading}   />
+            {/* <Movies movies={data} loading={isloading}   /> */}
+
+
+      <Logger/>   
+      <ApiFetching/>
 
 
 
