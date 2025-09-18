@@ -4,6 +4,7 @@ import Home from './lecture-14/pages/home'
 import About from './lecture-14/pages/about'
 import Contact from './lecture-14/pages/contact'
 import Layout from './lecture-14/pages/layout'
+import Theme from './lecture-15/theme'
 
 
 
@@ -18,6 +19,8 @@ function App() {
         <Route   index element={<Home/>}  /> 
         <Route   path="/about" element={<About/>}  />
         <Route   path="/contact" element={<Contact/>}  />
+        <Route   path="/theme" element={<Theme/>}  />
+
     </Route>
       </Routes>
     </BrowserRouter>
